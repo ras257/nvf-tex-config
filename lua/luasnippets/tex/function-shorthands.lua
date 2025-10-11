@@ -21,6 +21,10 @@ local shorthands = {
   { trig = "'has", sub = "\\arsinh", default_arg = "x" },
   { trig = "'hac", sub = "\\arcosh", default_arg = "x" },
   { trig = "'hat", sub = "\\artanh", default_arg = "x" },
+
+  { trig = "'ar", sub = "\\arg", default_arg = "x" },
+  { trig = "'Ar", sub = "\\Arg", default_arg = "x" },
+  { trig = "'l", sub = "\\log", default_arg = "x" },
 }
 return {
   unpack(map(shorthands, function(shorthand)

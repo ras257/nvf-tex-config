@@ -108,6 +108,8 @@ return {
 
   s({ trig = ";/", snippetType = "autosnippet", condition = in_text }, { t("\\tick") }),
 
+  s({ trig = "qq", snippetType = "autosnippet" }, { t("\\quad") }),
+
   unpack(map(staticCharacters, function(char)
     return s(
       { trig = char.trig, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },

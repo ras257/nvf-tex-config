@@ -64,6 +64,20 @@ return {
     )
   ),
 
+  s({ trig = "obb", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\overbrace{<>}^{<>}",
+      { d(1, get_visual), i(2) }
+    )
+  ),
+
+  s({ trig = "ubb", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\underbrace{<>}^{<>}",
+      { d(1, get_visual), i(2) }
+    )
+  ),
+
   unpack(map(math_text_shorthand, function(shorthand)
     return s(
       { trig = shorthand.trig, snippetType = "autosnippet", condition = in_mathzone },

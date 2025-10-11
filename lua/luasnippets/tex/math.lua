@@ -155,6 +155,13 @@ return {
     )
   ),
 
+  s({ trig = "ctt", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\cancelto{<>}{<>}",
+      { i(1), d(2, get_visual) }
+    )
+  ),
+
   s({ trig = "gcd", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\gcd(<>, <>)",
@@ -187,6 +194,27 @@ return {
     fmta(
       "\\ceil{<>}",
       { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "Re", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\Re(<>)",
+      { i(1, "z") }
+    )
+  ),
+
+  s({ trig = "Im", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\Im(<>)",
+      { i(1, "z") }
+    )
+  ),
+
+  s({ trig = "kdd", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\delta_{<> <>}",
+      { i(1, "i"), i(2, "j") }
     )
   ),
 
