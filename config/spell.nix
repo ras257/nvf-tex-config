@@ -45,6 +45,7 @@
         "adjoint"
         "affine"
         "analytic"
+        "argand"
         "asymptotic"
         "autocorrelation"
         "autonomous"
