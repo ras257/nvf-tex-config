@@ -148,6 +148,13 @@ return {
     )
   ),
 
+  s({ trig = "mod", wordTrig = true, snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\pmod{<>}",
+      { i(1) }
+    )
+  ),
+
   s({ trig = "caa", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\cancel{<>}",

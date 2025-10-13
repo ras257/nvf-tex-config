@@ -61,7 +61,7 @@ local texEnvironments = {
   { trig = "aa", name = "align*", condition = in_text },
   { trig = "cc", name = "proofcases", condition = in_text },
   { trig = "ee", name = "enumerate", condition = in_text },
-  { trig = "ii", name = "itemize", condition = in_text },
+  { trig = "zz", name = "itemize", condition = in_text },
   { trig = "oo", name = "proof", condition = in_text },
   { trig = "pp", name = "proposition", condition = in_text },
   { trig = "xx", name = "example", condition = in_text },

@@ -73,7 +73,7 @@ return {
 
   s({ trig = "ubb", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
-      "\\underbrace{<>}^{<>}",
+      "\\underbrace{<>}_{<>}",
       { d(1, get_visual), i(2) }
     )
   ),
