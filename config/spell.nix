@@ -135,6 +135,7 @@
         "piecewise"
         "planarity"
         "polytope"
+        "preimage"
         "primitive"
         "probabilistic"
         "projection"

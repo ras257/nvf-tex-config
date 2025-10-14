@@ -109,7 +109,7 @@ return {
     )
   ),
 
-  s({ trig = "ll", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "lgg", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\log_{<>}",
       { d(1, get_visual) }
@@ -201,6 +201,20 @@ return {
     fmta(
       "\\ceil{<>}",
       { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "span", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\Span\\{<>\\}",
+      { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "ipp", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 },
+    fmta(
+      "\\inner{<>}{<>}",
+      { i(1), i(2) }
     )
   ),
 
@@ -318,6 +332,13 @@ return {
   s({ trig = "hh", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\hat{<>}",
+      { i(1) }
+    )
+  ),
+
+  s({ trig = "arr", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\avec{<>}",
       { i(1) }
     )
   ),

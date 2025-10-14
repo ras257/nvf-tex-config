@@ -66,6 +66,8 @@ local staticCharacters = {
   { trig = "!!", sub = "\\centernot" },
   { trig = "ninn", sub = "\\notin" },
   { trig = "inn", sub = "\\in" },
+  { trig = "pll", sub = "\\parallel" },
+  { trig = "perp", sub = "\\perp" },
   { trig = ";/", sub = "\\tick" },
   { trig = "XOR", sub = "\\lxor" },
   { trig = "OR", sub = "\\lor" },
