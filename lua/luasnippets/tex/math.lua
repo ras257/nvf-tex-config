@@ -270,7 +270,7 @@ return {
   ),
 
   -- Definite Integral
-  s({ trig = "id", snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "idd", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\int_{<>}^{<>} <> \\d{<>}",
       { i(1), i(2), i(3), i(4, "x") }
