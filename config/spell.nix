@@ -105,6 +105,7 @@
         "integrable"
         "invertible"
         "irreducible"
+        "isometries"
         "isometry"
         "isomorphic"
         "isomorphism"

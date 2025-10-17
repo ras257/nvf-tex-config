@@ -285,7 +285,7 @@ return {
     )
   ),
 
-  s({ trig = "ev", snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "eval", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\eval{<>}{<>}{<>}",
       { i(1), i(2), i(3) }

@@ -30,6 +30,8 @@
         "Underfull \\\\hbox"
         "Overfull \\\\vbox"
         "Underfull \\\\vbox"
+        "LaTeX Warning: Reference"
+        "LaTeX Warning: There were undefined references."
       ];
     };
 
