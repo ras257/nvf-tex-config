@@ -232,10 +232,17 @@ return {
     )
   ),
 
-  s({ trig = "kdd", snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "kdd", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
     fmta(
       "\\delta_{<> <>}",
       { i(1, "i"), i(2, "j") }
+    )
+  ),
+
+  s({ trig = "lcc", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
+    fmta(
+      "\\levi_{<> <> <>}",
+      { i(1, "i"), i(2, "j"), i(3, "k") }
     )
   ),
 
