@@ -92,6 +92,10 @@ return {
 
   s({ trig = "EE", snippetType = "autosnippet", condition = in_mathzone }, { t("\\exists") }),
 
+  s({ trig = "ker", snippetType = "autosnippet", condition = in_mathzone }, { t("\\ker") }),
+
+  s({ trig = "imm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\im") }),
+
   s({ trig = "div", snippetType = "autosnippet", condition = in_mathzone }, { t("\\mid") }),
 
   s({ trig = "ndiv", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 }, { t("\\nmid") }),
@@ -103,9 +107,9 @@ return {
   s({ trig = "rel", snippetType = "autosnippet", condition = in_mathzone }, { t("\\rel") }),
 
   s({ trig = "iff", snippetType = "autosnippet", condition = in_mathzone }, { t("\\iff") }),
-  
+
   s({ trig = "pmm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\pm") }),
-  
+
   s({ trig = ";;", snippetType = "autosnippet", condition = in_text }, { t("\\par") }),
 
   s({ trig = ";/", snippetType = "autosnippet", condition = in_text }, { t("\\tick") }),

@@ -134,13 +134,6 @@ return {
     )
   ),
   
-  s({ trig = "ker", wordTrig = true, snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\ker(<>)",
-      { i(1) }
-    )
-  ),
-
   s({ trig = "pss", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\powerset{<>}",

@@ -7,7 +7,7 @@
         mode = "i";
         silent = true;
         # See https://castel.dev/post/lecture-notes-1/#correcting-spelling-mistakes-on-the-fly
-        action = "<c-g>u<Esc>[s1z=`]a<c-g>u";
+        action = "<c-g>u<Esc>[s1z=`]i<c-g>u";
       }
       {
         key = "<c-j>";
@@ -51,6 +51,7 @@
         "autonomous"
         "basis"
         "bijection"
+        "bijectivity"
         "bolzano"
         "cardinality"
         "categorical"
@@ -102,6 +103,7 @@
         "idempotent"
         "independent"
         "injective"
+        "injectivity"
         "integrable"
         "invertible"
         "irreducible"
@@ -162,6 +164,7 @@
         "subset"
         "subspace"
         "surjection"
+        "surjectivity"
         "symplectic"
         "tangential"
         "taylor"
