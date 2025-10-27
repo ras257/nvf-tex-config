@@ -117,7 +117,7 @@ return {
   ),
 
   s({ trig = "lnn", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
-    { t("\\ln ") }
+    { t("\\ln") }
   ),
 
   s({ trig = "exp", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
@@ -126,14 +126,14 @@ return {
       { i(1) }
     )
   ),
-  
+
   s({ trig = "det", wordTrig = true, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\det(<>)",
       { i(1) }
     )
   ),
-  
+
   s({ trig = "pss", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\powerset{<>}",
