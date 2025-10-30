@@ -78,6 +78,13 @@ return {
     )
   ),
 
+  s({ trig = "xrr", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\xrightarrow{<>}",
+      { d(1, get_visual) }
+    )
+  ),
+
   unpack(map(math_text_shorthand, function(shorthand)
     return s(
       { trig = shorthand.trig, snippetType = "autosnippet", condition = in_mathzone },

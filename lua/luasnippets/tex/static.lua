@@ -51,6 +51,10 @@ local staticCharacters = {
   { trig = ";0", sub = "\\emptyset" },
   { trig = ";>", sub = "\\implies" },
   { trig = ";<", sub = "\\lhd" }, -- Normal subgroup
+  { trig = "l..", sub = "\\ldots" },
+  { trig = "v..", sub = "\\vdots" },
+  { trig = "d..", sub = "\\ddots" },
+  { trig = "c..", sub = "\\cdots" },
   { trig = "...", sub = "\\cdots" },
   { trig = "<=", sub = "\\leq" },
   { trig = ">=", sub = "\\geq" },
@@ -96,7 +100,17 @@ return {
 
   s({ trig = "imm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\im") }),
 
+  s({ trig = "rnn", snippetType = "autosnippet", condition = in_mathzone }, { t("\\rank") }),
+
+  s({ trig = "nll", snippetType = "autosnippet", condition = in_mathzone }, { t("\\nullity") }),
+
+  s({ trig = "dim", snippetType = "autosnippet", condition = in_mathzone }, { t("\\dim") }),
+
   s({ trig = "div", snippetType = "autosnippet", condition = in_mathzone }, { t("\\mid") }),
+
+  s({ trig = "sym", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Sym") }),
+
+  s({ trig = "isom", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Isom") }),
 
   s({ trig = "ndiv", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 }, { t("\\nmid") }),
 
