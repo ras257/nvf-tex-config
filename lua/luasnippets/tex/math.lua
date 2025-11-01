@@ -52,6 +52,13 @@ return {
     )
   ),
 
+  s({ trig = helpers.letter_or_delim .. "DD", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "<>^{<>}",
+      { cap(1), t("\\dag") }
+    )
+  ),
+
   s({ trig = helpers.letter_or_delim_or_digit .. "\"", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "<>^{<>}",
