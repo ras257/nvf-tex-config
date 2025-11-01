@@ -239,6 +239,13 @@ return {
     )
   ),
 
+  s({ trig = "stt", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
+    fmta(
+      "\\Stab_<>(<>)",
+      { i(1, "G"), i(2, "x") }
+    )
+  ),
+
   s({ trig = helpers.not_letter .. "(p?)dv(%a)(%a?)(%d?)", regTrig = true, wordTrig = false, condition = in_mathzone },
     { cap(1), f(function(_, snip) 
       local result = "\\" .. snip.captures[2] .. "deriv"
