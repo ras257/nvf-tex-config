@@ -112,6 +112,8 @@ return {
 
   s({ trig = "isom", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Isom") }),
 
+  s({ trig = "cll", snippetType = "autosnippet", condition = in_mathzone }, { t("\\ccl") }),
+
   s({ trig = "ndiv", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 }, { t("\\nmid") }),
 
   s({ trig = "cup", snippetType = "autosnippet", condition = in_mathzone }, { t("\\cup") }),
