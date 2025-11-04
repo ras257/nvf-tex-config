@@ -100,6 +100,8 @@ return {
 
   s({ trig = "imm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\im") }),
 
+  s({ trig = "trr", snippetType = "autosnippet", condition = in_mathzone }, { t("\\tr") }),
+
   s({ trig = "rnn", snippetType = "autosnippet", condition = in_mathzone }, { t("\\rank") }),
 
   s({ trig = "nll", snippetType = "autosnippet", condition = in_mathzone }, { t("\\nullity") }),
