@@ -78,6 +78,8 @@ local staticCharacters = {
   { trig = "AND", sub = "\\land" },
   { trig = "NOT", sub = "\\lnot" },
   -- Special sets
+  { trig = "Coo", sub = "\\Cinf" },
+  { trig = "MM", sub = "\\mob" },
   { trig = "CC", sub = "\\C" },
   { trig = "NN", sub = "\\N" },
   { trig = "RR", sub = "\\R" },

@@ -182,6 +182,7 @@
         "variational"
         "vectorial"
         "wellordered"
+        "Wronskian"
         "zorn"
       ];
     };
