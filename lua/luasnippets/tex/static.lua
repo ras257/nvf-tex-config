@@ -102,6 +102,8 @@ return {
 
   s({ trig = "imm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\im") }),
 
+  s({ trig = "det", snippetType = "autosnippet", condition = in_mathzone }, { t("\\det") }),
+
   s({ trig = "trr", snippetType = "autosnippet", condition = in_mathzone }, { t("\\tr") }),
 
   s({ trig = "rnn", snippetType = "autosnippet", condition = in_mathzone }, { t("\\rank") }),
@@ -117,6 +119,8 @@ return {
   s({ trig = "isom", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Isom") }),
 
   s({ trig = "cll", snippetType = "autosnippet", condition = in_mathzone }, { t("\\ccl") }),
+
+  s({ trig = "fxx", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Fix") }),
 
   s({ trig = "ndiv", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 }, { t("\\nmid") }),
 

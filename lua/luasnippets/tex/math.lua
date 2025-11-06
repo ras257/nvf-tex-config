@@ -134,13 +134,6 @@ return {
     )
   ),
 
-  s({ trig = "det", wordTrig = true, snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\det(<>)",
-      { i(1) }
-    )
-  ),
-
   s({ trig = "pss", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\powerset{<>}",
@@ -200,6 +193,13 @@ return {
   s({ trig = "ceil", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\ceil{<>}",
+      { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "ovv", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\overline{<>}",
       { d(1, get_visual) }
     )
   ),
@@ -360,9 +360,15 @@ return {
   postfix({ trig = "vv", match_pattern = "[%a0]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\vec{" .. l.POSTFIX_MATCH .. "}") }
   ),
+
   postfix({ trig = "uvv", match_pattern = "[%a]$", priority = 1001, regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\uvec{" .. l.POSTFIX_MATCH .. "}") }
   ),
+
+  postfix({ trig = "ww", match_pattern = "[%a0]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+    { l("\\widetilde{" .. l.POSTFIX_MATCH .. "}") }
+  ),
+
   postfix({ trig = "hh", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\hat{" .. l.POSTFIX_MATCH .. "}") }
   ),
