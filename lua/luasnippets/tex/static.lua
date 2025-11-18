@@ -37,6 +37,7 @@ local staticCharacters = {
   { trig = ";z", sub = "\\zeta" },
   { trig = ";u", sub = "\\tau" },
   -- Other static characters
+  { trig = ";L", sub = "\\ell" },
   { trig = "xx", sub = "\\times" },
   { trig = ";*", sub = "\\star" },
   { trig = ";@", sub = "\\partial" },
