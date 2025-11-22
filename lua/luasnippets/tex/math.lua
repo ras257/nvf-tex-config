@@ -350,6 +350,13 @@ return {
     )
   ),
 
+  s({ trig = "dt", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\dot{<>}",
+      { i(1) }
+    )
+  ),
+
   s({ trig = "hh", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\hat{<>}",

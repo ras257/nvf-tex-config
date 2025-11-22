@@ -10,6 +10,7 @@ local staticCharacters = {
   { trig = ";c", sub = "\\chi" },
   { trig = ";d", sub = "\\delta" },
   { trig = ";D", sub = "\\Delta" },
+  { trig = ";h", sub = "\\eta" },
   { trig = ";e", sub = "\\varepsilon" },
   { trig = ";ve", sub = "\\epsilon" },
   { trig = ";F", sub = "\\Phi" },
