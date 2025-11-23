@@ -34,6 +34,7 @@
       expandtab = true;
       linebreak = true;
       breakindent = true;
+      tm = 500;
     };
 
     enableLuaLoader = true;
@@ -73,6 +74,17 @@
           "v"
         ];
         action = "\"+";
+      }
+    ];
+
+    autocmds = [
+      {
+        command = "set timeoutlen=50";
+        event = [ "InsertEnter" ];
+      }
+      {
+        command = "set timeoutlen=500";
+        event = [ "InsertLeave" ];
       }
     ];
   };
