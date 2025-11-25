@@ -88,6 +88,7 @@
         "equidimensional"
         "ergodic"
         "expectation"
+        "extremum"
         "fibration"
         "fieldaxiom"
         "frechet"
