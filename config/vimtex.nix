@@ -84,7 +84,8 @@
         key = "csm";
         mode = "n";
         action = "<Plug>(vimtex-env-change-math)";
-      }{
+      }
+      {
         key = "tsm";
         mode = "n";
         action = "<Plug>(vimtex-env-toggle-math)";

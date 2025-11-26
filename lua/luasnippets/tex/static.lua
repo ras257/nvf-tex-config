@@ -88,6 +88,8 @@ local staticCharacters = {
   { trig = "QQ", sub = "\\Q" },
   { trig = "ZZ", sub = "\\Z" },
   { trig = "FF", sub = "\\F" },
+  { trig = "GLL", sub = "\\GL" },
+  { trig = "SLL", sub = "\\SL" },
 }
 
 return {

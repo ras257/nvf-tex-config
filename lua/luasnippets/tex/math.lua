@@ -183,6 +183,13 @@ return {
     )
   ),
 
+  s({ trig = "nmm", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\norm{<>}",
+      { d(1, get_visual) }
+    )
+  ),
+
   s({ trig = "floor", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\floor{<>}",
