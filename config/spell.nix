@@ -109,6 +109,7 @@
         "homotopy"
         "hyperbolic"
         "hyperplane"
+        "hypersurface"
         "idempotent"
         "incongruent"
         "independent"
@@ -193,6 +194,7 @@
         "variational"
         "vectorial"
         "wellordered"
+        "WLOG"
         "Wronskian"
         "zorn"
       ];
