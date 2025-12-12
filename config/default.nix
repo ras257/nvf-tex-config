@@ -56,6 +56,10 @@
       "texpresso.vim" = {
         package = pkgs.vimPlugins.texpresso-vim;
       };
+
+      "whitespace.nvim" = {
+        package = pkgs.vimPlugins.whitespace-nvim;
+      };
     };
 
     statusline.lualine.enable = true;
@@ -74,6 +78,14 @@
           "v"
         ];
         action = "\"+";
+      }
+      {
+        key = "<Leader>tr";
+        mode = [
+          "n"
+        ];
+        lua = true;
+        action = "require('whitespace-nvim').trim";
       }
     ];
 
