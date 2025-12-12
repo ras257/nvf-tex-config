@@ -33,6 +33,12 @@
         "LaTeX Warning: Reference"
         "LaTeX Warning: There were undefined references."
       ];
+
+      vimtex_env_toggle_math_map = {
+        "$" = "\\[";
+        "\\[" = "align";
+        "align" = "equation";
+      };
     };
 
     keymaps = [

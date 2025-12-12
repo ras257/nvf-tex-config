@@ -2,11 +2,35 @@ local helpers = require('luasnip-helpers')
 local cap = helpers.cap
 local get_visual = helpers.get_visual
 local in_mathzone = helpers.in_mathzone
+
+local function generate_derivative(_, snip)
+  local nodes = {}
+  table.insert(nodes, t("\\" .. snip.captures[2] .. "deriv"))
+  if snip.captures[5] ~= "" then
+    table.insert(nodes, t("[" .. snip.captures[5] .. "]"))
+  end
+  if snip.captures[4] == "" then
+    if snip.captures[3] == "" then
+      table.insert(nodes, sn(1,
+        fmta(
+          "{<>}{<>}",
+          { i(1), i(2) }
+        )
+      ))
+    else
+      table.insert(nodes, t("{}{" .. snip.captures[3] .. "}"))
+    end
+  else
+    table.insert(nodes, t("{" .. snip.captures[3] .. "}{" .. snip.captures[4] .. "}"))
+  end
+  return sn(nil, nodes)
+end
+
 return {
-  s({ trig = "([^%a])ff", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "ff", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
-      "<>\\frac{<>}{<>}",
-      { cap(1), i(1), i(2) }
+      "\\frac{<>}{<>}",
+      { d(1, get_visual), i(2) }
     )
   ),
 
@@ -267,28 +291,17 @@ return {
     )
   ),
 
-  s({ trig = helpers.not_letter .. "(p?)dv(%a)(%a?)(%d?)", regTrig = true, wordTrig = false, condition = in_mathzone },
-    { cap(1), f(function(_, snip) 
-      local result = "\\" .. snip.captures[2] .. "deriv"
-      if snip.captures[5] ~= "" then
-        result = result .. "[" .. snip.captures[5] .. "]"
-      end
-      if snip.captures[4] == "" then
-        result = result .. "{}{" .. snip.captures[3] .. "}"
-      else
-        result = result .. "{" .. snip.captures[3] .. "}{" .. snip.captures[4] .. "}"
-      end
-      return result
-    end)}
+  s({ trig = helpers.not_letter .. "(p?)dv(%a?)(%a?)(%d?)", regTrig = true, wordTrig = false, condition = in_mathzone },
+    { cap(1), d(1, generate_derivative)}
   ),
 
   s({ trig = "at", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\at{<>}{<>}",
-      { i(1), i(2) }
+      { d(1, get_visual), i(2) }
     )
   ),
-  
+
   -- Indefinite Integral
   s({ trig = "ii", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
@@ -316,7 +329,7 @@ return {
   s({ trig = "eval", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\eval{<>}{<>}{<>}",
-      { i(1), i(2), i(3) }
+      { d(1, get_visual), i(2), i(3) }
     )
   ),
 
@@ -342,7 +355,7 @@ return {
       { i(1, "n=0"), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
     )
   ),
-  
+
   s({ trig = "CAP", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\bigcap_{<>}<>",
