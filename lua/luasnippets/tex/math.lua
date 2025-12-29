@@ -27,7 +27,7 @@ local function generate_derivative(_, snip)
 end
 
 return {
-  s({ trig = "ff", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "ff", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\frac{<>}{<>}",
       { d(1, get_visual), i(2) }

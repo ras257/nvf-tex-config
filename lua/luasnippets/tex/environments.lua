@@ -59,7 +59,7 @@ end
 local texEnvironments = {
   { trig = "nn", name = "equation", condition = in_text },
   { trig = "aa", name = "align*", condition = in_text },
-  { trig = "tt", name = "center", condition = in_text },
+  { trig = "ss", name = "center", condition = in_text },
   { trig = "kk", name = "tikzpicture", condition = in_text },
   { trig = "cc", name = "proofcases", condition = in_text },
   { trig = "ee", name = "enumerate", condition = in_text },
