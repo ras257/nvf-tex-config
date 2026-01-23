@@ -59,7 +59,7 @@ end
 local texEnvironments = {
   { trig = "nn", name = "equation", condition = in_text },
   { trig = "aa", name = "align*", condition = in_text },
-  { trig = "ss", name = "center", condition = in_text },
+  { trig = "qq", name = "center", condition = in_text },
   { trig = "kk", name = "tikzpicture", condition = in_text },
   { trig = "cc", name = "proofcases", condition = in_text },
   { trig = "ee", name = "enumerate", condition = in_text },
@@ -68,6 +68,7 @@ local texEnvironments = {
   { trig = "pp", name = "proposition", condition = in_text },
   { trig = "xx", name = "example", condition = in_text },
   { trig = "ll", name = "lemma", condition = in_text },
+  { trig = "ww", name = "law", condition = in_text },
   { trig = "yy", name = "corollary", condition = in_text },
   { trig = "dd", name = "definition", condition = in_text },
   { trig = "tt", name = "theorem", condition = in_text },

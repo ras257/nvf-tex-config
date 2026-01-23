@@ -83,6 +83,13 @@ return {
     )
   ),
 
+  s({ trig = helpers.letter_or_delim .. "CC", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "<>^{<>}",
+      { cap(1), t("\\comp") }
+    )
+  ),
+
   s({ trig = helpers.letter_or_delim_or_digit .. "\"", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "<>^{<>}",
@@ -228,6 +235,20 @@ return {
     )
   ),
 
+  s({ trig = "max", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\max\\{<>\\}",
+      { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "min", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\min\\{<>\\}",
+      { d(1, get_visual) }
+    )
+  ),
+
   s({ trig = "ovv", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\overline{<>}",
@@ -363,6 +384,13 @@ return {
     )
   ),
 
+  s({ trig = "dvv", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\d{<>}",
+      { i(1) }
+    )
+  ),
+
   s({ trig = "vv", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\vec{<>}",
@@ -370,9 +398,31 @@ return {
     )
   ),
 
-  s({ trig = "dt", snippetType = "autosnippet", condition = in_mathzone },
+  s({ trig = "dt", snippetType = "autosnippet", condition = in_mathzone, priority = 1004 },
     fmta(
       "\\dot{<>}",
+      { i(1) }
+    )
+  ),
+
+  s({ trig = "ddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1005 },
+    fmta(
+      "\\ddot{<>}",
+      { i(1) }
+    )
+  ),
+
+
+  s({ trig = "dddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1006 },
+    fmta(
+      "\\dddot{<>}",
+      { i(1) }
+    )
+  ),
+
+  s({ trig = "ddddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1007 },
+    fmta(
+      "\\ddddot{<>}",
       { i(1) }
     )
   ),
@@ -407,7 +457,7 @@ return {
     { l("\\hat{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
-  postfix({ trig = "dt", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  postfix({ trig = "dt", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone, priority = 1000 },
     { l("\\dot{" .. l.POSTFIX_MATCH .. "}") }
   ),
 

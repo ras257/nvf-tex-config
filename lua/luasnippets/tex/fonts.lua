@@ -10,6 +10,7 @@ local math_text_shorthand = {
   { trig = "tte", text = "there exists" },
   { trig = "tti", text = "if" },
   { trig = "tts", text = "such that" },
+  { trig = "tt.", text = "s.t." },
   { trig = "tta", text = "and" },
   { trig = "ttt", text = "is true" },
   { trig = "tto", text = "otherwise" },
