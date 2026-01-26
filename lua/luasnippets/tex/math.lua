@@ -168,14 +168,14 @@ return {
   s({ trig = "exp", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\exp(<>)",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "pss", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\powerset{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
