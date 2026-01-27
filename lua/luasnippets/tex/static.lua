@@ -129,8 +129,6 @@ return {
 
   s({ trig = "fxx", snippetType = "autosnippet", condition = in_mathzone }, { t("\\Fix") }),
 
-  s({ trig = "spp", snippetType = "autosnippet", condition = in_mathzone }, { t("\\sup") }),
-
   s({ trig = "ndiv", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 }, { t("\\nmid") }),
 
   s({ trig = "cup", snippetType = "autosnippet", condition = in_mathzone }, { t("\\cup") }),
