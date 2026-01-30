@@ -79,6 +79,10 @@ local staticCharacters = {
   { trig = "OR", sub = "\\lor" },
   { trig = "AND", sub = "\\land" },
   { trig = "NOT", sub = "\\lnot" },
+  { trig = "giv", sub = "\\vert" },
+  -- Limits positioning
+  { trig = "lmm", sub = "\\limits" },
+  { trig = "nll", sub = "\\nolimits" },
   -- Special sets
   { trig = "Coo", sub = "\\Cinf" },
   { trig = "MM", sub = "\\mob" },
@@ -146,6 +150,8 @@ return {
   s({ trig = ";/", snippetType = "autosnippet", condition = in_text }, { t("\\tick") }),
 
   s({ trig = "qq", snippetType = "autosnippet" }, { t("\\quad") }),
+
+  s({ trig = "%%", snippetType = "autosnippet", wordTrig = false }, { t("\\%") }),
 
   unpack(map(staticCharacters, function(char)
     return s(

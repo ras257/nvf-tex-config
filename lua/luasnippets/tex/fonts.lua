@@ -58,6 +58,13 @@ return {
     )
   ),
 
+  s({ trig = "mss", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\mathscr{<>}",
+      { d(1, get_visual) }
+    )
+  ),
+
   s({ trig = "mrr", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\mathrm{<>}",

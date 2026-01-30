@@ -37,14 +37,7 @@ return {
   s({ trig = "lim", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\lim<> <>",
-      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "0") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "0") })) }), i(2) }
-    )
-  ),
-
-  s({ trig = "lmm", snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\limits_{<> \\to <>}",
-      { i(1), i(2, "0") }
+      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "0") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "0") })), sn(nil, fmta("\\nolimits_{<> \\to <>}", { i(1), i(2, "0") })) }), i(2) }
     )
   ),
 
@@ -373,7 +366,7 @@ return {
   s({ trig = "ss", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\sum<><>",
-      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
     )
   ),
 
@@ -381,49 +374,49 @@ return {
   s({ trig = "pp", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\prod<><>",
-      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
     )
   ),
 
   s({ trig = "CUP", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\bigcup<><>",
-      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
     )
   ),
 
   s({ trig = "CAP", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\bigcap<><>",
-      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
     )
   ),
 
   s({ trig = "sup", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\sup<>",
-      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })) }) }
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\nolimits_{<>} ", { i(1, "n \\in \\N") })) }) }
     )
   ),
 
   s({ trig = "inf", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\inf<>",
-      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })) }) }
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\nolimits_{<>} ", { i(1, "n \\in \\N") })) }) }
     )
   ),
 
   s({ trig = "lsup", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 },
     fmta(
       "\\limsup<> <>",
-      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "\\infty") })) }), i(2) }
+      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\nolimits_{<> \\to <>}", { i(1), i(2, "\\infty") })) }), i(2) }
     )
   ),
 
   s({ trig = "linf", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 },
     fmta(
       "\\liminf<> <>",
-      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "\\infty") })) }), i(2) }
+      { c(1, { sn(nil, fmta("_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\limits_{<> \\to <>}", { i(1), i(2, "\\infty") })), sn(nil, fmta("\\nolimits_{<> \\to <>}", { i(1), i(2, "\\infty") })) }), i(2) }
     )
   ),
 

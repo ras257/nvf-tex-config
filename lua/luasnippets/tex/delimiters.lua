@@ -40,7 +40,7 @@ return {
     { trig = "lmr", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\left<> <> \\middle<> <> \\right<>",
-      { i(1), i(2), i(3), i(4), rep(1) }
+      { i(1, "."), i(2), i(3), i(4), rep(1) }
     )
   ),
 

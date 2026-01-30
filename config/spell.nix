@@ -123,6 +123,7 @@
         "integrable"
         "invertible"
         "irreducible"
+        "irrotational"
         "isocline"
         "isoclines"
         "isometries"
