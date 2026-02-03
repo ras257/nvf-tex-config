@@ -182,6 +182,7 @@
         "subgroup"
         "submanifold"
         "subset"
+        "subsequences"
         "subspace"
         "supremum"
         "surjection"

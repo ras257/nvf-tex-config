@@ -424,28 +424,35 @@ return {
   s({ trig = "dvv", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\d{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "vv", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\vec{<>}",
-      { i(1) }
+      { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "uu", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\uvec{<>}",
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "dt", snippetType = "autosnippet", condition = in_mathzone, priority = 1004 },
     fmta(
       "\\dot{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "ddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1005 },
     fmta(
       "\\ddot{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
@@ -453,28 +460,28 @@ return {
   s({ trig = "dddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1006 },
     fmta(
       "\\dddot{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "ddddt", snippetType = "autosnippet", condition = in_mathzone, priority = 1007 },
     fmta(
       "\\ddddot{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "hh", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\hat{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
   s({ trig = "arr", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\avec{<>}",
-      { i(1) }
+      { d(1, get_visual) }
     )
   ),
 
@@ -482,7 +489,7 @@ return {
     { l("\\vec{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
-  postfix({ trig = "uvv", match_pattern = "[%a]$", priority = 1001, regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  postfix({ trig = "uu", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\uvec{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
