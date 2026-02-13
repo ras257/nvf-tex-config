@@ -312,6 +312,20 @@ return {
     )
   ),
 
+  s({ trig = "Var", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
+    fmta(
+      "\\Var({<>})",
+      { i(1) }
+    )
+  ),
+
+  s({ trig = "Cov", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
+    fmta(
+      "\\Cov({<>})",
+      { i(1) }
+    )
+  ),
+
   s({ trig = helpers.not_letter .. "(p?)dv(%a?)(%a?)(%d?)", regTrig = true, wordTrig = false, condition = in_mathzone },
     { cap(1), d(1, generate_derivative)}
   ),
@@ -326,8 +340,22 @@ return {
   -- Indefinite Integral
   s({ trig = "ii", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
-      "\\int <> \\d{<>}",
-      { i(1), i(2, "x") }
+      "\\int<> \\d{<>}",
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} <>", { i(1), i(2) }))}), i(2, "x") }
+    )
+  ),
+
+  s({ trig = "dii", snippetType = "autosnippet", condition = in_mathzone, priority = 1001 },
+    fmta(
+      "\\iint<> \\d{<>} \\d{<>}",
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} <>", { i(1), i(2) }))}), i(2, "x"), i(3, "y") }
+    )
+  ),
+
+  s({ trig = "tii", snippetType = "autosnippet", condition = in_mathzone, prioity = 1001 },
+    fmta(
+      "\\iiint<> \\d{<>} \\d{<>} \\d{<>}",
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} <>", { i(1), i(2) }))}), i(2, "x"), i(3, "y"), i(4, "z") }
     )
   ),
 
@@ -336,6 +364,13 @@ return {
     fmta(
       "\\int_{<>} <> \\cdot \\d{\\vec{<>}}",
       { i(1, "C"), i(2), i(3, "x") }
+    )
+  ),
+
+  s({ trig = "oii", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\oint<> \\d{<>}",
+      { c(1, { sn(nil, { t(" "), i(1) }), sn(nil, fmta("_{<>} <>", { i(1), i(2) }))}), i(2, "x") }
     )
   ),
 
