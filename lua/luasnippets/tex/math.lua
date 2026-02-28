@@ -235,27 +235,6 @@ return {
     )
   ),
 
-  s({ trig = "max", snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\max\\{<>\\}",
-      { d(1, get_visual) }
-    )
-  ),
-
-  s({ trig = "min", snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\min\\{<>\\}",
-      { d(1, get_visual) }
-    )
-  ),
-
-  s({ trig = "ovv", snippetType = "autosnippet", condition = in_mathzone },
-    fmta(
-      "\\overline{<>}",
-      { d(1, get_visual) }
-    )
-  ),
-
   s({ trig = "span", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\Span\\{<>\\}",
@@ -314,14 +293,14 @@ return {
 
   s({ trig = "Var", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
     fmta(
-      "\\Var({<>})",
+      "\\Var(<>)",
       { i(1) }
     )
   ),
 
   s({ trig = "Cov", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
     fmta(
-      "\\Cov({<>})",
+      "\\Cov(<>)",
       { i(1) }
     )
   ),
@@ -455,6 +434,19 @@ return {
     )
   ),
 
+  s({ trig = "max", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\max<>",
+      { c(1, { sn(nil, fmta("\\{<>\\}", { i(1) })), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\nolimits_{<>} ", { i(1, "n \\in \\N") })) }) }
+    )
+  ),
+
+  s({ trig = "min", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\min<>",
+      { c(1, { sn(nil, fmta("\\{<>\\}", { i(1) })), sn(nil, fmta("_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\limits_{<>} ", { i(1, "n \\in \\N") })), sn(nil, fmta("\\nolimits_{<>} ", { i(1, "n \\in \\N") })) }) }
+    )
+  ),
 
   s({ trig = "dvv", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
@@ -473,6 +465,13 @@ return {
   s({ trig = "uu", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\uvec{<>}",
+      { d(1, get_visual) }
+    )
+  ),
+
+  s({ trig = "bb", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\overline{<>}",
       { d(1, get_visual) }
     )
   ),
@@ -534,6 +533,10 @@ return {
 
   postfix({ trig = "hh", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\hat{" .. l.POSTFIX_MATCH .. "}") }
+  ),
+
+  postfix({ trig = "bb", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+    { l("\\overline{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
   postfix({ trig = "dt", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone, priority = 1000 },

@@ -97,4 +97,14 @@ function M.generate_matrix(rows, cols, trailing_cr)
   return sn(nil, nodes)
 end
 
+function M.generate_substack(rows)
+  local nodes = {}
+  for j = 1, rows do
+    table.insert(nodes, i(j))
+    table.insert(nodes, t(" \\\\ "))
+  end
+  table.remove(nodes, #nodes)
+  return sn(nil, nodes)
+end
+
 return M

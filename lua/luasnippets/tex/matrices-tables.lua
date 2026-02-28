@@ -1,6 +1,7 @@
 local helpers = require("luasnip-helpers")
 local in_mathzone = helpers.in_mathzone
 local generate_matrix = helpers.generate_matrix
+local generate_substack = helpers.generate_substack
 
 local function get_matrix_type(_, snip)
   if snip.captures[1] == " " then
@@ -55,6 +56,13 @@ return {
     {
       f(get_table_dividers),
       d(1, function(_, snip) return generate_matrix(tonumber(snip.captures[2]), tonumber(snip.captures[3])) end),
+    })
+  ),
+
+  s({ trig = "stk(%d+)", regTrig = true, wordTrig = false, condition = in_mathzone },
+    fmta("\\substack{<>}",
+    {
+      d(1, function(_, snip) return generate_substack(tonumber(snip.captures[1])) end),
     })
   ),
 }
