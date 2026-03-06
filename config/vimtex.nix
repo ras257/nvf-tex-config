@@ -9,7 +9,7 @@
     globals = {
       tex_flavor = "latex";
 
-      vimtex_view_method = "zathura";
+      vimtex_view_method = "sioyek";
       vimtex_format_enabled = true;
       vimtex_indent_on_ampersands = true;
       vimtex_imaps_enabled = false;
