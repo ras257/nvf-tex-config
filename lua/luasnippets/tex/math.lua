@@ -135,8 +135,8 @@ return {
 
   s({ trig = "sq", wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     fmta(
-      "\\sqrt{<>}",
-      { d(1, get_visual) }
+      "\\sqrt<>",
+      { c(1, { sn(nil, fmta("{<>}", { d(1, get_visual) })), sn(nil, fmta("[<>]{<>}", { i(1, "n"), d(2, get_visual) }))}) }
     )
   ),
 

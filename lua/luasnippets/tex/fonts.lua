@@ -93,6 +93,13 @@ return {
     )
   ),
 
+  s({ trig = "srr", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\stackrel{<>}<>",
+      { i(1), d(2, get_visual) }
+    )
+  ),
+
   unpack(map(math_text_shorthand, function(shorthand)
     return s(
       { trig = shorthand.trig, snippetType = "autosnippet", condition = in_mathzone },

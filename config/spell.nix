@@ -156,6 +156,7 @@
         "nilpotent"
         "noetherian"
         "normalizer"
+        "orthochronous"
         "orthogonal"
         "orthonormal"
         "parametric"
