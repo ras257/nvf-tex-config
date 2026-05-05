@@ -63,6 +63,8 @@ local staticCharacters = {
   { trig = ">=", sub = "\\geq" },
   { trig = ">>", sub = "\\gg" },
   { trig = "<<", sub = "\\ll" },
+  { trig = ">c", sub = "\\succeq" },
+  { trig = "<c", sub = "\\preceq" },
   { trig = "!>", sub = "\\mapsto" },
   { trig = "->", sub = "\\to" },
   { trig = "==", sub = "\\equiv" },
