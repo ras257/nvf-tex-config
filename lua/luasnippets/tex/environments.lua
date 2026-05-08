@@ -2,11 +2,17 @@ local helpers = require("luasnip-helpers")
 local in_mathzone = helpers.in_mathzone
 local in_text = helpers.in_text
 local in_item_list = helpers.in_item_list
-local get_visual = helpers.get_visual local is_start_of_line = helpers.is_start_of_line local generate_matrix = helpers.generate_matrix
+local get_visual = helpers.get_visual
+local is_start_of_line = helpers.is_start_of_line
+local generate_matrix = helpers.generate_matrix
 local map = helpers.map;
 
 local function directly_in_proofcases_and_newline(line_to_cursor, matched_trigger)
   return helpers.get_environment() == "proofcases" and is_start_of_line(line_to_cursor, matched_trigger)
+end
+
+local function directly_in_opti_and_newline(line_to_cursor, matched_trigger)
+  return (helpers.in_env("mini") or helpers.in_env("maxi") or helpers.in_env("argmini") or helpers.in_env("argmaxi")) and is_start_of_line(line_to_cursor, matched_trigger)
 end
 
 local function in_cases()
@@ -18,7 +24,7 @@ local function in_align()
 end
 
 local function in_proof_and_newline(line_to_cursor, matched_trigger)
-  return helpers.in_env("proof") and helpers.is_start_of_line(line_to_cursor, matched_trigger)
+  return helpers.in_env("proof") and is_start_of_line(line_to_cursor, matched_trigger)
 end
 
 local function in_item_list_and_newline(line_to_cursor, matched_trigger)
@@ -137,6 +143,13 @@ return {
   ),
 
   s(
+    { trig = "\\\\", snippetType = "autosnippet", condition = directly_in_opti_and_newline },
+    fmta("\\addConstraint{<>}{<>}",
+      { i(1), i(2) }
+    )
+  ),
+
+  s(
     { trig = "case(%d+)", regTrig = true, condition = in_mathzone },
     fmta(
       [[
@@ -150,7 +163,7 @@ return {
 
   s(
     { trig = "lbb", snippetType = "autosnippet" },
-    { c(1, { 
+    { c(1, {
         sn(nil, fmta("\\label{<>}", { i(1) })),
         sn(nil, fmta("\\label[<>]{<>}", { d(1, get_environment), i(2) })),
       })
@@ -175,6 +188,18 @@ return {
     fmta(
       "\\footnotetext{<>}",
       { i(1) }
+    )
+  ),
+
+  s(
+    { trig = "opp", snippetType = "autosnippet", condition = is_start_of_line },
+    fmta([[
+          \begin{<>*}
+            {<>}{<>}{}{<>}
+            \addConstraint{<>}{<>}<>
+          \end{<>*}
+        ]],
+      { c(1, { t("mini"), t("maxi"), t("argmini"), t("argmaxi") }), i(2, "\\vec{x}"), i(3), i(4), i(5), i(6), i(0), rep(1) }
     )
   ),
 
