@@ -94,6 +94,7 @@
         "ergodic"
         "expectation"
         "extremise"
+        "extremises"
         "extremising"
         "extremum"
         "fibration"
