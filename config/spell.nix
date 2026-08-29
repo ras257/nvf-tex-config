@@ -93,6 +93,7 @@
         "equidimensional"
         "ergodic"
         "expectation"
+        "extremise"
         "extremum"
         "fibration"
         "fieldaxiom"
