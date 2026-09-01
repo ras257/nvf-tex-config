@@ -150,6 +150,8 @@ return {
 
   s({ trig = "pmm", snippetType = "autosnippet", condition = in_mathzone }, { t("\\pm") }),
 
+  s({ trig = "non", snippetType = "autosnippet", condition = in_mathzone }, { t("\\nonumber") }),
+
   s({ trig = ";;", snippetType = "autosnippet", condition = in_text }, { t("\\par") }),
 
   s({ trig = ";/", snippetType = "autosnippet", condition = in_text }, { t("\\tick") }),
