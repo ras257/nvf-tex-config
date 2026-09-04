@@ -98,6 +98,15 @@
         command = "set timeoutlen=500";
         event = [ "InsertLeave" ];
       }
+      # Disable Alacritty padding whilst in neovim as it makes the background look strange
+      {
+        event = [ "VimEnter" ];
+        command = "silent exec \"!alacritty msg config 'window.padding.y=0' 'window.padding.x=0'\"";
+      }
+      {
+        event = [ "VimLeave" ];
+        command = "silent exec \"!alacritty msg config --reset\"";
+      }
     ];
   };
 }
