@@ -45,7 +45,7 @@
       {
         key = "<leader>tt";
         mode = "n";
-        action = "<cmd>TeXpresso %<CR>";
+        action = "<cmd>TeXpresso main.tex<CR>";
       }
       # Swap the $ mappings to m and then set the old m mappings to i
       {
