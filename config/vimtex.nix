@@ -41,6 +41,9 @@
       };
     };
 
+    # Stop treesitter indentation from messing with VimTeX indentation
+    treesitter.indent.excludes = [ "tex" ];
+
     keymaps = [
       {
         key = "<leader>tt";
