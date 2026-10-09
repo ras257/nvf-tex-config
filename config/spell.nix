@@ -170,6 +170,7 @@
         "pgf"
         "piecewise"
         "planarity"
+        "pointwise"
         "polytope"
         "preimage"
         "primitive"
