@@ -406,6 +406,20 @@ return {
     )
   ),
 
+  s({ trig = "OPP", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\bigoplus<><>",
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+    )
+  ),
+
+  s({ trig = "OXX", snippetType = "autosnippet", condition = in_mathzone },
+    fmta(
+      "\\bigotimes<><>",
+      { c(1, { sn(nil, fmta("_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\limits_{<>}", { i(1, "n=0") })), sn(nil, fmta("\\nolimits_{<>}", { i(1, "n=0") })) }), c(2, { sn(nil, fmta("^{<>} <>", { i(1, "\\infty"), i(2) })), sn(nil, { t(" "), i(1) }) }) }
+    )
+  ),
+
   s({ trig = "sup", snippetType = "autosnippet", condition = in_mathzone },
     fmta(
       "\\sup<>",

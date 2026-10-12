@@ -192,7 +192,7 @@ return {
   ),
 
   s(
-    { trig = "opp", snippetType = "autosnippet", condition = is_start_of_line },
+    { trig = "opti", snippetType = "autosnippet", condition = is_start_of_line },
     fmta([[
           \begin{<>*}
             {<>}{<>}{}{<>}
