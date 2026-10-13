@@ -214,6 +214,8 @@
         "unitary"
         "variational"
         "vectorial"
+        "wavefunction"
+        "wavefunctions"
         "wellordered"
         "WLOG"
         "worldline"

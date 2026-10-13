@@ -305,6 +305,13 @@ return {
     )
   ),
 
+  s({ trig = "mch", snippetType = "autosnippet", wordTrig = false, condition = in_mathzone },
+    fmta(
+      "\\mchain{<>}",
+      { i(1) }
+    )
+  ),
+
   s({ trig = helpers.not_letter .. "(p?)dv(%a?)(%a?)(%d?)", regTrig = true, wordTrig = false, condition = in_mathzone },
     { cap(1), d(1, generate_derivative)}
   ),
@@ -541,7 +548,7 @@ return {
     { l("\\uvec{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
-  postfix({ trig = "ww", match_pattern = "[%a0]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
+  postfix({ trig = "ww", match_pattern = "[%a]$", regTrig = true, wordTrig = false, snippetType = "autosnippet", condition = in_mathzone },
     { l("\\widetilde{" .. l.POSTFIX_MATCH .. "}") }
   ),
 
